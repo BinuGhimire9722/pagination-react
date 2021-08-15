@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  min-height: 50px;
+}
+
+.photoRow{
+  margin-bottom: 50px;
+}
+
+.pageNo{
+  margin : 0px 20px;
+}
