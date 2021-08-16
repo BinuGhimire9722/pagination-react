@@ -9,8 +9,8 @@ const route = [
     },
 
     {
-        name: "About",
-        path: "/about",
+        name: "Photos",
+        path: "/photos",
         component: AboutPage,
     }
 ]
