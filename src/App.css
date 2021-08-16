@@ -53,3 +53,25 @@
 .pageNo{
   margin : 0px 20px;
 }
+
+.productImg{
+  max-height: 205px;
+  min-height: 205px;
+  transition: transform 2s;
+  margin : 10px 0px;
+}
+
+
+.productCard:hover .productImg{
+  transform :scale(1.1);
+}
+
+.cart{
+  margin : 10px 0px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.productCard:hover .cart{
+  opacity: 1;
+}

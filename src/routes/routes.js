@@ -1,5 +1,6 @@
 import AboutPage from "../pages/aboutPage";
 import HomePage from "../pages/homePage";
+import ProductPage from "../pages/productsPage";
 
 const route = [
     {
@@ -12,6 +13,11 @@ const route = [
         name: "Photos",
         path: "/photos",
         component: AboutPage,
+    },
+    {
+        name : "Products",
+        path :"/products",
+        component : ProductPage
     }
 ]
 
