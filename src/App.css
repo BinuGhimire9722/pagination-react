@@ -75,3 +75,15 @@
 .productCard:hover .cart{
   opacity: 1;
 }
+
+.aboutDiv{
+  margin : 20px 0px;
+}
+
+.about{
+  margin : 0px 10px;
+  color: blue;
+}
+.about:hover{
+  cursor: pointer;
+}

@@ -13,7 +13,7 @@ function ProductPage(props) {
         // 2 = 2, 4
         // 3 = 4, 6
         // x  =  2x -2 , 2x
-        let firstProduct = Products.slice( 2*page -2 , 2*page);
+        let firstProduct = Products.slice( 4*page -4 , 4*page);
         setProduct(firstProduct);
     }
 
@@ -27,11 +27,23 @@ function ProductPage(props) {
     },[page])
 
     const previousBtn=()=>{
+        if(page > 1){
         setPage(page-1);
+        }
     }
 
     const nextBtn=()=>{
-        setPage(page+1);
+
+        // 1 = 1  = 4*0 +1  
+        // 2 = 5  =  4*1+1
+        // 3 = 9  =  4*2+1
+        // 4 = 13 = 4*3+1
+        let minProd = 4 * page-1 +1;
+
+        let totalProduct = Products.length;
+        if(minProd < totalProduct ){
+            setPage(page+1);
+        }
     }
 
     return <div>
