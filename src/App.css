@@ -47,7 +47,7 @@
 }
 
 .photoRow{
-  margin-bottom: 50px;
+  margin: 50px 0px;
 }
 
 .pageNo{
@@ -86,4 +86,11 @@
 }
 .about:hover{
   cursor: pointer;
+}
+
+.photoCard {
+  transition : transform 1s;
+}
+.photoCard:hover {
+  transform: scale(1.1);
 }

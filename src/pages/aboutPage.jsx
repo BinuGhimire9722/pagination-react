@@ -6,6 +6,8 @@ import { Row, Col, Button, Container } from "react-bootstrap";
 import PhotoService from "../services/photosService";
 import AboutLuffy from './sections/aboutLuffy';
 import AboutZoro from './sections/aboutZoro';
+
+
 function AboutPage(props) {
 
     const [photo, setPhoto] = useState([]);
@@ -66,7 +68,7 @@ function AboutPage(props) {
 
             <Row className="photoRow">
                 {photo.map((item) => {
-                    return <Col md={3}>
+                    return <Col md={3} className="photoCard">
                         <p className="title">{item.title}</p>
                         <img src={item.url} className="img-fluid"></img>
                     </Col>
