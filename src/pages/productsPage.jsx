@@ -2,11 +2,18 @@ import React, { useEffect } from "react";
 import Products from "../data/productData";
 import { Row, Col, Container,Button } from "react-bootstrap";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addCart } from "../state/actions/cartActions";
 
 function ProductPage(props) {
 
+    const cart = useSelector((state)=>state);
+    console.log(cart);
+
     const[page,setPage] = useState(1);
     const[product,setProduct] = useState([]);
+
+    const dispatch = useDispatch();
 
     const loadProduct=()=>{
         // 1 = 0 , 2
@@ -17,6 +24,9 @@ function ProductPage(props) {
         setProduct(firstProduct);
     }
 
+    const handleAddCart=(item)=>{
+        dispatch(addCart(item));
+    }
 
     useEffect(()=>{
         loadProduct();
@@ -54,7 +64,7 @@ function ProductPage(props) {
                         <div>{item.name}</div>
                         <div><img src={item.image} className="img-fluid productImg"></img></div>
                         <div>{item.price} {item.unit}</div>
-                        <Button className="cart">Add To Cart</Button>
+                        <Button className="cart" onClick={(e)=>handleAddCart(item)}>Add To Cart</Button>
                     </Col>
                 })}
             </Row>

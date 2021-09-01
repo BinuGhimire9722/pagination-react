@@ -94,3 +94,7 @@
 .photoCard:hover {
   transform: scale(1.1);
 }
+
+.margin-TB{
+  margin : 20px 0px;
+}
